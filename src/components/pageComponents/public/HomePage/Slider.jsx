@@ -7,26 +7,26 @@ export default function Slider() {
     // all slider datas
     const slideDatas = useMemo(() => (
         [
-        {
-            title: "Join our growing community",
-            semititle: "Attend classes with your pairs",
-            desc: "We invite you to enroll in our online Master Class, where you can immerse yourself in advanced learning and gain valuable insights from our tutors.",
-            Sdesc: "Be present for your future!",
-            btnTitle: "Apply Now",
-            btnPath: "/register",
-            imgPath:
-            image,
-        },
-        {
-            title: "Join our growing community",
-            semititle: "Attend classes with your pairs",
-            desc: "We invite you to enroll in our online Master Class, where you can immerse yourself in advanced learning and gain valuable insights from our tutors.",
-            Sdesc: "Be present for your future!",
-            btnTitle: "Apply Now",
-            btnPath: "/register",
-            imgPath:
-            image,
-        },
+            {
+                title: "Join our growing community",
+                semititle: "Attend classes with your pairs",
+                desc: "We invite you to enroll in our online Master Class, where you can immerse yourself in advanced learning and gain valuable insights from our tutors.",
+                Sdesc: "Be present for your future!",
+                btnTitle: "Apply Now",
+                btnPath: "/register",
+                imgPath:
+                image,
+            },
+            {
+                title: "Join our growing community",
+                semititle: "Attend classes with your pairs",
+                desc: "We invite you to enroll in our online Master Class, where you can immerse yourself in advanced learning and gain valuable insights from our tutors.",
+                Sdesc: "Be present for your future!",
+                btnTitle: "Apply Now",
+                btnPath: "/register",
+                imgPath:
+                image,
+            },
         ]
 
     ), []) 
@@ -49,7 +49,7 @@ export default function Slider() {
     };
 
     return (
-        <div className="w-full max-w-[1200px] overflow-hidden mb-8 mx-auto">
+        <div className="w-full max-w-[1300px] overflow-hidden mx-auto">
             <div
                 className="flex w-full transition-transform ease-custom duration-500"
                 style={{ transform: `translateX(-${currentSlide * 100}%)` }}

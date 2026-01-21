@@ -27,7 +27,7 @@ const TestimonialSection = () => {
       <SectionHeading title={"testimonial"} position="right" />
       <div className="Container">
         <div className="area-wrapper !py-16">
-          <div className="flex gap-4 items-center justify-center">
+          <div className="flex flex-col gap-20 md:flex-row md:gap-4 items-center justify-center">
             <div className="blockContent flex-1">
               <h4 className="font-bold semi-title text-[#020D14] mb-6">
                 Check out what our clients <br /> are saying about us
@@ -39,7 +39,7 @@ const TestimonialSection = () => {
                 Get Started{" "}
               </Link>
             </div>
-            <div className="lg:flex gap-2 flex-1 hidden">
+            <div className="lg:flex gap-2 flex-1 ">
               {data.map((item, index) => (
                 <TestimonialCard
                   key={index}

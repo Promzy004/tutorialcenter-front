@@ -2,6 +2,7 @@ import Navbar from "../../components/pageComponents/public/Global/Navbar";
 import StickyButtons from "../../components/pageComponents/public/Global/StickyButtons";
 import BenefitSection from "../../components/pageComponents/public/HomePage/BenefitSection";
 import Hero from "../../components/pageComponents/public/HomePage/Hero";
+import ProgramSection from "../../components/pageComponents/public/HomePage/ProgramSection";
 import Slider from "../../components/pageComponents/public/HomePage/Slider";
 import TestimonialSection from "../../components/pageComponents/public/HomePage/TestimonialSection";
 
@@ -13,6 +14,7 @@ const Home = () => {
             <Hero />
             <BenefitSection />
             <Slider />
+            <ProgramSection />
             <TestimonialSection />
         </>
     );

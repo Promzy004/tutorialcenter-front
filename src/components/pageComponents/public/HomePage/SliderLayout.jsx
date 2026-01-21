@@ -30,7 +30,7 @@ export default function SliderLayout({
                     </div>
                     <div className="w-full h-full relative">
                         {/* gradient on image */}
-                        <div className="absolute left-0 top-0 bg-gradient-to-r from-[#09314F] from-0% to-transparent to-50% w-full h-full"></div>
+                        <div className="absolute left-0 bottom-0 bg-gradient-to-t md:bg-gradient-to-r from-[#09314F] from-0% to-transparent to-50% w-full h-full"></div>
                         <img src={imgPath} className="flex-1 w-full h-[500px] " alt="" />
                     </div>
             </div>
