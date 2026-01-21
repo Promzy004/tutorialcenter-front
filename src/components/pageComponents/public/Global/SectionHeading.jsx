@@ -1,0 +1,16 @@
+import icon from "../../../../assets/images/tc_icon.svg";
+
+const SectionHeading = ({ title, position }) => {
+
+    return (
+        <>
+            <div className="bg-primary py-3 relative xl:max-w-[1200px] w-full mx-auto 2xl:px-9 lg:px-8 px-5 mb-14">
+                <h1 className="semi-title text-center text-white uppercase">{title}</h1>
+
+                <img src={icon} alt="" className={`absolute bottom-0 translate-y-20 ${position}-14 w-[100px]`} />
+            </div>
+        </>
+    );
+}
+ 
+export default SectionHeading;
