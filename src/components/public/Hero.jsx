@@ -49,7 +49,7 @@ export default function Hero() {
                             <div className="h-[520px] rounded-lg relative">
                                 <img
                                     src={hero_image}
-                                    alt="hero section image"
+                                    alt="hero section"
                                     className="w-full h-full object-contain "
                                 />
                                 <img

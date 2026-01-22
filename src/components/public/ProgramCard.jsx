@@ -9,7 +9,7 @@ const ProgramCard = ({subject, title, month, quarter, year, topic1, topic2, topi
             <div className="md:mr-14 mr-5">
                 <div className="max-h-full overflow-hidden shadow-custom-1 rounded-2xl my-2">
                     <div className="w-full h-[180px] py-2 flex justify-center relative bg-[#A9C1D3]">
-                        <img src={logo} alt="an image of JAMB" className="h-full" />
+                        <img src={logo} alt="JAMB" className="h-full" />
                         <div className="absolute -bottom-6 right-4 bg-sencondary w-10 h-10 rounded-full flex items-center justify-center">
                             <img className="max-w-4" src={PenIcon} alt="" />
                         </div>

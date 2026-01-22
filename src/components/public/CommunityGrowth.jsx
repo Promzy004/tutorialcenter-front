@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import image from "../../assets/images/handshake.png"
 import CommunityGrowthLayout from "./CommunityGrowthLayout";
 
@@ -34,6 +34,11 @@ export default function CommunityGrowth() {
     const [currentSlide, setCurrentSlide] = useState(0);
     const autoSlideInterval = 4000;
 
+    // next slide
+    const nextSlide = useCallback(() => {
+        setCurrentSlide((prev) => (prev + 1) % slideDatas.length);
+    }, [slideDatas.length]);
+
     useEffect(() => {
         
         const interval = setInterval(() => {
@@ -41,12 +46,7 @@ export default function CommunityGrowth() {
         }, autoSlideInterval);
 
         return () => clearInterval(interval);
-    }, [currentSlide]);
-
-    // next slide
-    const nextSlide = () => {
-        setCurrentSlide((prev) => (prev + 1) % slideDatas.length);
-    };
+    }, [nextSlide, autoSlideInterval]);
 
     return (
         <div className="w-full max-w-[1300px] overflow-hidden mx-auto">

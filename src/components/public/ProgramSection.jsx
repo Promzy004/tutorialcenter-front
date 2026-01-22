@@ -28,44 +28,6 @@ const ProgramSection = () => {
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
-    //next slide function
-    const nextSlide = useCallback(() => {
-        if (isTransitioning) return;
-
-        setIsTransitioning(true);
-        setCurrentIndex((prev) => (prev + 1) % programDatas.length);
-
-        setTimeout(() => setIsTransitioning(false), 500);
-    }, [isTransitioning]);
-
-    //previous slide function
-    const prevSlide = () => {
-        if (isTransitioning) return;
-
-        setIsTransitioning(true);
-        setCurrentIndex((prev) => (prev - 1 + programDatas.length) % programDatas.length);
-
-        setTimeout(() => setIsTransitioning(false), 500);
-    };
-
-    // Auto slide every 3 seconds
-    useEffect(() => {
-
-        // runs nextSlide repeatedly
-        const interval = setInterval(() => {
-            nextSlide();
-        }, 3000);
-
-        return () => clearInterval(interval);
-    }, [nextSlide]);
-
-    // Calculate transform value for sliding effect
-    const getTransformValue = () => {
-        const cardWidth = 100 / slidesToShow;
-        return `translateX(-${currentIndex * cardWidth}%)`;
-    };
-
-    // all program data
     const programDatas = useMemo(() => (
         [
             {
@@ -120,9 +82,44 @@ const ProgramSection = () => {
                 path: "/learnMore",
             },
         ]
+    ), []);
 
-    ), []) 
-    
+    //next slide function
+    const nextSlide = useCallback(() => {
+        if (isTransitioning) return;
+
+        setIsTransitioning(true);
+        setCurrentIndex((prev) => (prev + 1) % programDatas.length);
+
+        setTimeout(() => setIsTransitioning(false), 500);
+    }, [isTransitioning, programDatas.length]);
+
+    //previous slide function
+    const prevSlide = () => {
+        if (isTransitioning) return;
+
+        setIsTransitioning(true);
+        setCurrentIndex((prev) => (prev - 1 + programDatas.length) % programDatas.length);
+
+        setTimeout(() => setIsTransitioning(false), 500);
+    };
+
+    // Auto slide every 3 seconds
+    useEffect(() => {
+
+        // runs nextSlide repeatedly
+        const interval = setInterval(() => {
+            nextSlide();
+        }, 3000);
+
+        return () => clearInterval(interval);
+    }, [nextSlide]);
+
+    // Calculate transform value for sliding effect
+    const getTransformValue = () => {
+        const cardWidth = 100 / slidesToShow;
+        return `translateX(-${currentIndex * cardWidth}%)`;
+    };
 
     return (
         <>
